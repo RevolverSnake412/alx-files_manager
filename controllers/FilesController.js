@@ -7,7 +7,9 @@ const dbClient = require('../utils/db');
 class FilesController {
   static async postUpload(req, res) {
     const token = req.headers['x-token'];
-    const { name, type, parentId = 0, isPublic = false, data } = req.body;
+    const {
+      name, type, parentId = 0, isPublic = false, data,
+    } = req.body;
 
     // Check if the user is authenticated
     if (!token) {
