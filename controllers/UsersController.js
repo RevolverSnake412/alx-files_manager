@@ -27,7 +27,7 @@ class UsersController {
 
     const newUser = {
       id: result.insertedId,
-      email: email,
+      email,
     };
 
     return res.status(201).json(newUser);
